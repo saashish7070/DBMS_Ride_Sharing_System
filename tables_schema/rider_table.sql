@@ -1,4 +1,4 @@
-CREATE TABLE rides (
+CREATE TABLE IF NOT EXISTS RIDE (
     ride_id INT PRIMARY KEY AUTO_INCREMENT,
     driver_id INT NOT NULL,
     start_location VARCHAR(255) NOT NULL,
@@ -8,5 +8,5 @@ CREATE TABLE rides (
     available_seats INT NOT NULL,
     fare DECIMAL(10, 2) NOT NULL,
     status ENUM('scheduled', 'ongoing', 'completed') DEFAULT 'scheduled',
-    FOREIGN KEY (driver_id) REFERENCES users(user_id)
+    FOREIGN KEY (driver_id) REFERENCES USER(user_id)
 );
