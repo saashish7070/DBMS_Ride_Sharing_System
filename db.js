@@ -3,8 +3,8 @@ const fs = require('fs');
 
 const pool = mysql.createPool({
     host: 'localhost',
-    user: 'root',
-    password: 'rootuser',
+    user: '*****',
+    password: '******',
     database: 'ridesharing_db',
     waitForConnections: true,
     connectionLimit: 10,
