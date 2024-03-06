@@ -4,7 +4,7 @@ const { pool } = require('../db');
 
 router.post('/', async (req, res) => {
     // Assuming you have a request body with necessary details for user creation
-    const { username, email, password, role } = req.body;
+    const {username, email, password, role} = req.body;
 
     try {
         // Insert the user into the database

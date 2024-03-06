@@ -3,8 +3,8 @@ const fs = require('fs');
 
 const pool = mysql.createPool({
     host: 'localhost',
-    user: '*****',
-    password: '******',
+    user: 'root',
+    password: 'rootuser',
     database: 'ridesharing_db',
     waitForConnections: true,
     connectionLimit: 10,
@@ -15,9 +15,9 @@ const createTables = async () => {
     try {
         // Read the SQL file with the schema
         const schemaSQL = fs.readFileSync('./tables_schema/user_table.sql', 'utf-8');
-        const schemaSQL2 = fs.readFileSync('./tables_schema/rider_table.sql', 'utf-8');
-        const schemaSQL3 = fs.readFileSync('./tables_schema/user_rides.sql', 'utf-8');
-        const schemaSQL4 = fs.readFileSync('./tables_schema/booking.sql', 'utf-8');
+        const schemaSQL2 = fs.readFileSync('./tables_schema/booking.sql', 'utf-8');
+        const schemaSQL3 = fs.readFileSync('./tables_schema/rider_table.sql', 'utf-8');
+        const schemaSQL4 = fs.readFileSync('./tables_schema/user_rides.sql', 'utf-8');
         const schemaSQL5 = fs.readFileSync('./tables_schema/transaction_table.sql', 'utf-8');
 
         // Execute the SQL to create the tables
