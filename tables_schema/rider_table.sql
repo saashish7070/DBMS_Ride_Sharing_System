@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS RIDE (
     end_time DATETIME,
     available_seats INT NOT NULL,
     fare DECIMAL(10, 2) NOT NULL,
-    status ENUM('scheduled', 'ongoing', 'completed') DEFAULT 'scheduled',
+    status VARCHAR(15) DEFAULT 'scheduled',
     FOREIGN KEY (driver_id) REFERENCES USER(user_id),
     FOREIGN KEY (booking_id) REFERENCES Booking(booking_id)
 );

@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS Booking (
     start_location VARCHAR(255) NOT NULL,
     end_location VARCHAR(255) NOT NULL,
     requested_seats INT NOT NULL,
-    status ENUM('pending', 'accepted', 'rejected') DEFAULT 'pending',
+    status VARCHAR(255) DEFAULT 'pending',
     FOREIGN KEY (passenger_id) REFERENCES USER(user_id)
 );
 
